@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
     {
         rxConnect.setParam("token_id",PassNumber);
         rxConnect.setParam("gaurd_name",REGISTERED_GAURD_NAME);
-        rxConnect.setParam("user_mobile",REGISTERED_MOBILE_NUBER);
+        rxConnect.setParam("guard_mobile",REGISTERED_MOBILE_NUBER);
         rxConnect.setParam("user","security");
 
         rxConnect.execute(Constants.PASS_RETREIVE_URL, RxConnect.POST, new RxConnect.RxResultHelper() {
@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
                 try {
                     Log.v("ResponseViewPass",result);
+                    Log.v("ResponseViewPAss",REGISTERED_MOBILE_NUBER);
 
                     JSONObject jsonObject=new JSONObject(result);
 

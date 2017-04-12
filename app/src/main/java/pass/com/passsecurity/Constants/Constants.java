@@ -6,7 +6,7 @@ package pass.com.passsecurity.Constants;
 
 public class Constants {
 
-    public static String PASS_RETREIVE_URL="";
+    public static String PASS_RETREIVE_URL="http://192.168.2.2/pass3/index.php/api/guardapi/guard_user_pass_info/format/json";
     public static String USER="user";
     public static String SHARED_PREF_KEY="mobile";
     public static String SHARED_PREF_KEY_NAME="name";

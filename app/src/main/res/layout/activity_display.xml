@@ -373,9 +373,10 @@
 
                         android:layout_width="0dp"
                         android:gravity="center"
+                        android:id="@+id/VEHICLE_No_ID"
                         android:layout_weight="50"
                         android:layout_height="match_parent"
-                        android:text="CAR NUMBER"
+                        android:text="VEHICLE NUMBER"
                         android:textSize="19sp"
                         android:textColor="#ffff" />
 
@@ -426,24 +427,183 @@
 
                 </LinearLayout>
 
-
-
-
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
+                <LinearLayout
+                    android:weightSum="100"
+                    android:layout_height="70dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="260dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_height="260dp"
-                        android:background="@color/colorPrimary"
-                        android:id="@+id/SCAN_PIC"/>
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_weight="50"
+                        android:layout_height="match_parent"
+                        android:text="DRIVER LICENSE"
+                        android:textSize="19sp"
+                        android:textColor="#ffff" />
+
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:textSize="19sp"
+                        android:layout_height="match_parent"
+                        android:text="Address"
+                        android:gravity="center_vertical"
+                        android:textColor="#ffff"
+                        android:id="@+id/driver_license_id"
+                        android:layout_marginLeft="20dp"/>
 
 
-                </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="100"
+                    android:layout_height="70dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_weight="50"
+                        android:layout_height="match_parent"
+                        android:text="Vehicle Model"
+                        android:textSize="19sp"
+                        android:textColor="#ffff" />
+
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:textSize="19sp"
+                        android:layout_height="match_parent"
+                        android:text="Address"
+                        android:gravity="center_vertical"
+                        android:textColor="#ffff"
+                        android:id="@+id/vehicle_model_id"
+                        android:layout_marginLeft="20dp"/>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:weightSum="102"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_weight="49"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"
+
+                            android:id="@+id/SCAN_PIC"/>
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"
+                            android:id="@+id/DL_PIC"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="4"
+                        android:weightSum="100"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="SCAN ID"
+                            android:gravity="center"
+                            android:textColor="#ffff"
+                            android:layout_height="match_parent" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:text="DRIVING LICENSE"
+                            android:gravity="center"
+                            android:textColor="#ffff"
+                            android:layout_height="match_parent" />
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="49"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"
+                            android:id="@+id/RC_BOOK_PIC"/>
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"
+
+                            android:id="@+id/INSURANCE_PIC"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="4"
+                    android:weightSum="100"
+                    android:layout_height="0dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text="RCBOOK "
+                        android:gravity="center"
+                        android:textColor="#ffff"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:text="INSURANCE "
+                        android:gravity="center"
+                        android:textColor="#ffff"
+                        android:layout_height="match_parent" />
+
+
+
+
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_marginTop="40dp"
                     android:layout_width="match_parent"
@@ -477,7 +637,7 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:id="@+id/RETRY"
-                        android:text="RETRY STATUS CHANGE"
+                        android:text="STATUS CHANGE"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>

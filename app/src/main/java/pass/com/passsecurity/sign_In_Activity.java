@@ -88,7 +88,7 @@ public class sign_In_Activity extends AppCompatActivity {
                     {
 
                                             SharedPreferences.Editor Editor=getSharedPreferences(Constants.USER,MODE_PRIVATE).edit();
-                                            Editor.putString(Constants.SHARED_PREF_KEY,GaurdPhone.getText().toString().trim());
+                                            Editor.putString(Constants.SHARED_PREF_KEY,"9040777073");
                                             Editor.putString(Constants.SHARED_PREF_KEY_NAME,GaurdName.getText().toString().trim());
                                             Editor.commit();
 
