@@ -26,7 +26,10 @@ import com.google.zxing.integration.android.IntentResult;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import mohitbadwal.rxconnect.RxConnect;
 import pass.com.passsecurity.Constants.Constants;
@@ -50,6 +53,10 @@ public class sign_In_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_sign__in_);
         rxConnect=new RxConnect(this);
         rxConnect.setCachingEnabled(false);
+
+
+
+
 
 
 

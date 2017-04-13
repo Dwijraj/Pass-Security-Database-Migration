@@ -21,6 +21,7 @@ import com.bumptech.glide.Glide;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -49,10 +50,9 @@ public class Display extends AppCompatActivity {
     private TextView VEHICLE_MODEL;
     private TextView Scan_id2;
     private ImageView Profile2;
-    private  String pass;
+    private String pass;
     private TextView ID_Sources;
     private TextView Application_status2;
-   private TextView GATE_NUMBER;
     private int WIDTH_SCREEN;
     private String APPLICATION_STATUS;
     private int HEIGHT_SCREEN;
@@ -65,6 +65,9 @@ public class Display extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
 
+        DateFormat dateFormat=new SimpleDateFormat("yyyy-mm-dd");
+        Log.v("DATEFORMAT",dateFormat.format(new Date(System.currentTimeMillis())));
+
         DRIVER_LICENSE=(TextView) findViewById(R.id.driver_license_id);
         VEHICLE_MODEL=(TextView) findViewById(R.id.vehicle_model_id);
         DL_IMAGE_VIEW=(ImageView) findViewById(R.id.DL_PIC);
@@ -73,7 +76,6 @@ public class Display extends AppCompatActivity {
         RETRY_BUTTON=(Button)findViewById(R.id.RETRY);
         rxConnect=new RxConnect(this);
         rxConnect.setCachingEnabled(false);
-        GATE_NUMBER=(TextView) findViewById(R.id.GATE);
         DESTINATION=(TextView)findViewById(R.id.DESTINATION);
         CarNumber=(TextView)findViewById(R.id.car_num);
         DriverName=(TextView)findViewById(R.id.driver_name);
@@ -143,6 +145,10 @@ public class Display extends AppCompatActivity {
 
 
             JSONObject jsonObject2=new JSONObject(PassDetails);
+            String DATE_TODAY=JSONParser.JSONValue(jsonObject2,"today");
+            Log.v("DATETODAY1",DATE_TODAY+"...");
+
+
 
             JSONObject jsonObject=jsonObject2.getJSONObject("application_info");
             Log.v("Here","1");
@@ -190,7 +196,7 @@ public class Display extends AppCompatActivity {
             Purpose2.setText(Purpose);
             Application_status2.setText(ApplicationStatus.toUpperCase());
 
-            if(ApplicationStatus.equals("1"))
+            if(ApplicationStatus.equals("1")&&DATE_TODAY.equals(DateOfJourney))
                 RETRY_BUTTON.setEnabled(true);
             else
                 RETRY_BUTTON.setEnabled(false);
@@ -300,8 +306,9 @@ public class Display extends AppCompatActivity {
 
     public void changeApplicationStatus()
     {
-        rxConnect.setParam("token_id",pass);
-        rxConnect.setParam("security_number",
+        rxConnect.setParam("verification_status","1");
+        rxConnect.setParam("pass_id",pass);
+        rxConnect.setParam("guard_mobile",
                 getSharedPreferences(Constants.USER,MODE_PRIVATE).getString(Constants.SHARED_PREF_KEY,"DEFAULT"));
         rxConnect.setParam("application_status",APPLICATION_STATUS);
         rxConnect.setParam("security_name",
@@ -310,6 +317,8 @@ public class Display extends AppCompatActivity {
         rxConnect.execute(Constants.PASS_STATUS_CHANGE_URL, RxConnect.POST, new RxConnect.RxResultHelper() {
             @Override
             public void onResult(String result) {
+
+                Log.v("ResultFromWeb",result);
 
                 try {
                     JSONObject jsonObject=new JSONObject(result);

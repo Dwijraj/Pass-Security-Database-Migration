@@ -38,6 +38,23 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:gravity="start"
+
+                        android:textSize="23sp"
+                        android:text="PERSONAL INFORMATION"
+                        android:textColor="#ffff"
+                        android:typeface="monospace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:weightSum="100"
                     android:layout_height="70dp"
                     android:layout_width="match_parent"
@@ -68,39 +85,6 @@
 
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:weightSum="100"
-                    android:layout_height="70dp"
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-
-                        android:layout_width="0dp"
-                        android:gravity="center"
-                        android:layout_weight="50"
-                        android:layout_height="match_parent"
-                        android:text="DESTINATION"
-                        android:textSize="19sp"
-                        android:textColor="#ffff" />
-
-                    <TextView
-                        android:layout_marginTop="0dp"
-                        android:layout_width="0dp"
-                        android:layout_weight="50"
-                        android:textSize="19sp"
-                        android:layout_height="match_parent"
-                        android:text="Address"
-                        android:gravity="center_vertical"
-                        android:textColor="#ffff"
-                        android:id="@+id/DESTINATION"
-                        android:layout_marginLeft="20dp"/>
-
-
-                </LinearLayout>
-
-
                 <LinearLayout
                     android:weightSum="100"
                     android:layout_height="70dp"
@@ -133,40 +117,6 @@
 
                 </LinearLayout>
 
-
-                <LinearLayout
-                    android:weightSum="100"
-                    android:layout_height="70dp"
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-
-                        android:layout_width="0dp"
-                        android:gravity="center"
-                        android:layout_weight="50"
-                        android:layout_height="match_parent"
-                        android:text="GATE"
-                        android:textSize="19sp"
-                        android:textColor="#ffff"
-                        />
-
-                    <TextView
-                        android:layout_marginTop="0dp"
-                        android:layout_width="0dp"
-                        android:layout_weight="50"
-                        android:textSize="19sp"
-                        android:layout_height="match_parent"
-                        android:text="Address"
-                        android:gravity="center_vertical"
-                        android:textColor="#ffff"
-                        android:id="@+id/GATE"
-                        android:layout_marginLeft="20dp"/>
-
-
-                </LinearLayout>
-
-
                 <LinearLayout
                     android:weightSum="100"
                     android:layout_height="70dp"
@@ -198,7 +148,6 @@
 
 
                 </LinearLayout>
-
                 <LinearLayout
                     android:weightSum="100"
                     android:layout_height="70dp"
@@ -261,11 +210,6 @@
 
 
                 </LinearLayout>
-
-
-
-
-
                 <LinearLayout
                     android:weightSum="100"
                     android:layout_height="70dp"
@@ -278,9 +222,41 @@
                         android:gravity="center"
                         android:layout_weight="50"
                         android:layout_height="match_parent"
-                        android:text="PURPOSE OF VISIT"
+                        android:text="DATE OF BIRTH"
                         android:textSize="19sp"
                         android:textColor="#ffff" />
+
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:textSize="19sp"
+                        android:layout_height="match_parent"
+                        android:text="Address"
+                        android:gravity="center_vertical"
+                        android:textColor="#ffff"
+                        android:id="@+id/SCAN_DOB"
+                        android:layout_marginLeft="20dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="100"
+                    android:layout_height="70dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:id="@+id/textView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="center"
+                        android:text="PURPOSE OF VISIT"
+                        android:textColor="#ffff"
+                        android:textSize="19sp" />
 
                     <TextView
                         android:layout_marginTop="0dp"
@@ -296,6 +272,66 @@
 
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:weightSum="100"
+                    android:layout_height="70dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_weight="50"
+                        android:layout_height="match_parent"
+                        android:text="DESTINATION"
+                        android:textSize="19sp"
+                        android:textColor="#ffff" />
+
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:textSize="19sp"
+                        android:layout_height="match_parent"
+                        android:text="Address"
+                        android:gravity="center_vertical"
+                        android:textColor="#ffff"
+                        android:id="@+id/DESTINATION"
+                        android:layout_marginLeft="20dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:gravity="start"
+                        android:textSize="23sp"
+                        android:text="VEHICLE INFORMATION"
+                        android:textColor="#ffff"
+                        android:typeface="monospace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 <LinearLayout
@@ -331,36 +367,7 @@
 
 
 
-                <LinearLayout
-                    android:weightSum="100"
-                    android:layout_height="70dp"
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal">
 
-                    <TextView
-
-                        android:layout_width="0dp"
-                        android:gravity="center"
-                        android:layout_weight="50"
-                        android:layout_height="match_parent"
-                        android:text="DATE OF BIRTH"
-                        android:textSize="19sp"
-                        android:textColor="#ffff" />
-
-                    <TextView
-                        android:layout_marginTop="0dp"
-                        android:layout_width="0dp"
-                        android:layout_weight="50"
-                        android:textSize="19sp"
-                        android:layout_height="match_parent"
-                        android:text="Address"
-                        android:gravity="center_vertical"
-                        android:textColor="#ffff"
-                        android:id="@+id/SCAN_DOB"
-                        android:layout_marginLeft="20dp"/>
-
-
-                </LinearLayout>
 
 
                 <LinearLayout
@@ -565,13 +572,13 @@
                             android:id="@+id/RC_BOOK_PIC"/>
 
                         <ImageView
-                            android:scaleType="fitXY"
-                            android:layout_weight="50"
+                            android:id="@+id/INSURANCE_PIC"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="50"
                             android:background="@color/colorPrimary"
 
-                            android:id="@+id/INSURANCE_PIC"/>
+                            android:scaleType="fitXY" />
 
 
                     </LinearLayout>

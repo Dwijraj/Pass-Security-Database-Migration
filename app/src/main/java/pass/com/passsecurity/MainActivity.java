@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void getDetails(String PassNumber)
     {
-        rxConnect.setParam("token_id",PassNumber);
+        rxConnect.setParam("pass_id",PassNumber);
         rxConnect.setParam("gaurd_name",REGISTERED_GAURD_NAME);
         rxConnect.setParam("guard_mobile",REGISTERED_MOBILE_NUBER);
         rxConnect.setParam("user","security");
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else
                     {
-                        Toast.makeText(getApplicationContext(),"You are not authorized to view this pass",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_SHORT).show();
                     }
 
 
