@@ -14,4 +14,12 @@ public class Constants {
     public static String GAURD_DETAILS_URL="http://192.168.2.2/pass3/index.php/api/guardapi/gets_guard/format/json";
     public static String GAURD_LOGIN_URL="";
     public static String SHARED_PREF_KEY_PASSWORD="";
+
+    /**
+     * ONLINE LINKS
+     */
+    public static String ONLINE_PASS_RETREIVE_URL="http://innovadorslab.co.in/pass3/index.php/api/guardapi/guard_user_pass_info/format/json";
+    public static String ONLINE_PASS_STATUS_CHANGE_URL="http://innovadorslab.co.in/pass3/index.php/api/guardapi/guards_verification_pass_detail/format/json";
+    public static String ONLINE_GAURD_DETAILS_URL="http://innovadorslab.co.in/pass3/index.php/api/guardapi/gets_guard/format/json";
+
 }

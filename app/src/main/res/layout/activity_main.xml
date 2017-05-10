@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:weightSum="100"
     android:background="@color/colorPrimary"
-    tools:context="pass.com.passsecurity.MainActivity">
+    tools:context="pass.com.passsecurity.UI.MainActivity">
 
    <LinearLayout
        android:gravity="center"

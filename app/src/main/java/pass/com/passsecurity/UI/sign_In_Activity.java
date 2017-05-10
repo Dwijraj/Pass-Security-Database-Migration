@@ -1,38 +1,24 @@
-package pass.com.passsecurity;
+package pass.com.passsecurity.UI;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.DataSetObserver;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
 import mohitbadwal.rxconnect.RxConnect;
 import pass.com.passsecurity.Constants.Constants;
+import pass.com.passsecurity.R;
 import pass.com.passsecurity.Utils.JSONParser;
 
 public class sign_In_Activity extends AppCompatActivity {
@@ -137,7 +123,7 @@ public class sign_In_Activity extends AppCompatActivity {
                      RESULT = MOBILE_ENTERED.getText().toString().trim();
                 }
                 rxConnect.setParam("guard_mobile", RESULT);
-                rxConnect.execute(Constants.GAURD_DETAILS_URL, RxConnect.POST, new RxConnect.RxResultHelper() {
+                rxConnect.execute(Constants.ONLINE_GAURD_DETAILS_URL, RxConnect.POST, new RxConnect.RxResultHelper() {
                 @Override
                 public void onResult(String result) {
 

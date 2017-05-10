@@ -1,11 +1,10 @@
-package pass.com.passsecurity;
+package pass.com.passsecurity.UI;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.format.Time;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -23,11 +22,11 @@ import org.json.JSONObject;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 import mohitbadwal.rxconnect.RxConnect;
 import pass.com.passsecurity.Constants.Constants;
+import pass.com.passsecurity.R;
 import pass.com.passsecurity.Utils.JSONParser;
 
 public class Display extends AppCompatActivity {
@@ -36,19 +35,19 @@ public class Display extends AppCompatActivity {
     private ImageView DL_IMAGE_VIEW;
     private ImageView RC_BOOK_IMAGE_VIEW;
     private ImageView INSURANCE_IMAGE_VIEW;
-    private TextView Name2;
-    private TextView Address2;
-    private TextView Mobile2;
-    private TextView CarNumber;
-    private TextView DriverName;
-    private TextView Dateofbirth2;
-    private TextView Dateofjourney2;
-    private TextView DESTINATION;
-    private TextView ID_No2;
-    private TextView Purpose2;
-    private TextView DRIVER_LICENSE;
-    private TextView VEHICLE_MODEL;
-    private TextView Scan_id2;
+    private TextView  Name2;
+    private TextView  Address2;
+    private TextView  Mobile2;
+    private TextView  CarNumber;
+    private TextView  DriverName;
+    private TextView  Dateofbirth2;
+    private TextView  Dateofjourney2;
+    private TextView  DESTINATION;
+    private TextView  ID_No2;
+    private TextView  Purpose2;
+    private TextView  DRIVER_LICENSE;
+    private TextView  VEHICLE_MODEL;
+    private TextView  Scan_id2;
     private ImageView Profile2;
     private String pass;
     private TextView ID_Sources;
@@ -314,7 +313,7 @@ public class Display extends AppCompatActivity {
         rxConnect.setParam("security_name",
                 getSharedPreferences(Constants.USER,MODE_PRIVATE).getString(Constants.SHARED_PREF_KEY_NAME,"DEFAULT"));
         rxConnect.setParam("check_time",new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(new Date(System.currentTimeMillis())));
-        rxConnect.execute(Constants.PASS_STATUS_CHANGE_URL, RxConnect.POST, new RxConnect.RxResultHelper() {
+        rxConnect.execute(Constants.ONLINE_PASS_STATUS_CHANGE_URL, RxConnect.POST, new RxConnect.RxResultHelper() {
             @Override
             public void onResult(String result) {
 

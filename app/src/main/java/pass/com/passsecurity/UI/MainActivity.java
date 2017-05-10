@@ -1,7 +1,5 @@
-package pass.com.passsecurity;
+package pass.com.passsecurity.UI;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +17,7 @@ import org.json.JSONObject;
 
 import mohitbadwal.rxconnect.RxConnect;
 import pass.com.passsecurity.Constants.Constants;
+import pass.com.passsecurity.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -106,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         rxConnect.setParam("guard_mobile",REGISTERED_MOBILE_NUBER);
         rxConnect.setParam("user","security");
 
-        rxConnect.execute(Constants.PASS_RETREIVE_URL, RxConnect.POST, new RxConnect.RxResultHelper() {
+        rxConnect.execute(Constants.ONLINE_PASS_RETREIVE_URL, RxConnect.POST, new RxConnect.RxResultHelper() {
             @Override
             public void onResult(String result) {
 
